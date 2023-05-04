@@ -1,0 +1,12 @@
+{
+  "apiUrl": "https://api-app-uat.introtouch.com",
+  "awsConfig": {
+    "Auth": {
+      "region": "us-east-2",
+      "userPoolId": "us-east-2_q4zlzISDH",
+      "userPoolWebClientId": "3pvbiu7bobebtubtqqn0faud2q"
+    }
+  },
+  "websiteDomain": "https://app-uat.introtouch.com",
+  "timeout": 30000
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="43px" height="43px" viewBox="0 0 43 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>mdpi/ic_launcher_APP Copy</title>
+    <g id="mdpi/ic_launcher_APP-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="#868282" x="0" y="0" width="47" height="47"></rect>
+        <g id="Group" transform="translate(6.000000, 17.000000)" fill="#FFFFFF" fill-rule="nonzero" font-family="AkkuratProBold, Akkurat Pro" font-weight="bold">
+            <text id=".com-copy" font-size="3" letter-spacing="0.0913043439">
+                <tspan x="24" y="8">.com</tspan>
+            </text>
+            <text id="IntroTouch-Copy" font-size="6" letter-spacing="0.18260869">
+                <tspan x="0" y="5">IntroTouch</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
