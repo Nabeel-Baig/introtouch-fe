@@ -12,11 +12,11 @@ const AddAdminContact = ({
   isLoading,
 }) => {
   return (
-    <div class="space-y-6">
+    <div className="space-y-6">
       <div>
         <label
           for="email"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
         >
           Select an item
         </label>
@@ -31,7 +31,7 @@ const AddAdminContact = ({
       <div>
         <label
           for="value"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
         >
           {selectedService.type === "MAIL"
             ? "Enter your email"
@@ -55,7 +55,7 @@ const AddAdminContact = ({
               ? "e.g. +1-416-555-1212"
               : "Link/URL"
           }
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
           required
           value={serviceValue}
           onChange={(event) => {

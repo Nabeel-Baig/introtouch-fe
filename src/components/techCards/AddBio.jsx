@@ -24,11 +24,11 @@ const AddBio = ({ onClickClose, bio, setBio }) => {
     [bio]
   );
   return (
-    <div class="space-y-6 w-80">
+    <div className="space-y-6 w-80">
       <div>
         <label
           for="value"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
         >
           Bio
         </label>

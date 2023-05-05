@@ -49,12 +49,12 @@ const ShareProfileBody = ({ link, isPublic }) => {
   };
 
   return (
-    <div class="space-y-6">
+    <div className="space-y-6">
       {!isPublic && (
         <>
           <label
             htmlFor="value"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >
             Email to share
           </label>
@@ -67,7 +67,7 @@ const ShareProfileBody = ({ link, isPublic }) => {
               name="email"
               id="email"
               placeholder="Enter email to share"
-              class={`bg-gray-50 border ${
+              className={`bg-gray-50 border ${
                 error ? "border-red-600" : "border-gray-300"
               } text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white`}
               required

@@ -49,7 +49,7 @@ const TechCard = ({
       </div>
       <div className="border rounded-[8px] shadow grid gap-4 grid-cols-5 p-4">
         {data.services?.map((service, i) => (
-          <Tooltip placement="top" content={service.name} trigger="hover">
+          <Tooltip placement="top" content={service.name} trigger="hover" key={i}>
             <div
               key={i}
               className={`flex cursor-pointer items-center content-center bg-white rounded-[10px] overflow-hidden justify-center drop-shadow-md`}

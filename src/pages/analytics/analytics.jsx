@@ -184,21 +184,21 @@ const Analytics = () => {
             <h1 className="mb-2 text-center text-2xl font-bold">Analytics</h1>
             {analytics ? (
               <>
-                <div class="p-6 max-w mb-10 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-                  <dl class="grid grid-cols-2 gap-5">
-                    <div class="flex flex-col items-center">
-                      <dt class="mb-2 text-xl font-extrabold">
+                <div className="p-6 max-w mb-10 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+                  <dl className="grid grid-cols-2 gap-5">
+                    <div className="flex flex-col items-center">
+                      <dt className="mb-2 text-xl font-extrabold">
                         {nFormatter(analytics?.views?.lastDay, 1)}
                       </dt>
-                      <dd class="font-light text-gray-500 dark:text-gray-400 text-center text-sm">
+                      <dd className="font-light text-gray-500 dark:text-gray-400 text-center text-sm">
                         Today Profile Views
                       </dd>
                     </div>
-                    <div class="flex flex-col items-center">
-                      <dt class="mb-2 text-xl font-extrabold">
+                    <div className="flex flex-col items-center">
+                      <dt className="mb-2 text-xl font-extrabold">
                         {nFormatter(analytics?.views?.lastWeek, 1)}
                       </dt>
-                      <dd class="font-light text-gray-500 dark:text-gray-400 text-center text-sm">
+                      <dd className="font-light text-gray-500 dark:text-gray-400 text-center text-sm">
                         Last Week Profile Views
                       </dd>
                     </div>
@@ -206,7 +206,7 @@ const Analytics = () => {
                 </div>
                 <div className="flex w-full justify-end">
                   <Dropdown
-                    class="shadow-md bg-brand-brown rounded-md"
+                    className="shadow-md bg-brand-brown rounded-md"
                     label={timeFrameType.name}
                     dismissOnClick={true}
                   >

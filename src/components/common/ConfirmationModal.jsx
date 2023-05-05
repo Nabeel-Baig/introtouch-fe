@@ -20,7 +20,7 @@ const ConfirmationModalBody = ({ confirmFn,cancelFn,isLoading }) => {
   }
 
   return (
-    <div class="space-y-6">
+    <div className="space-y-6">
       <div style={{ display: "flex", marginTop: "10px" }} className="justify-center">
         <div className="mt-5 flex justify-center w-3/5"> 
           <Button

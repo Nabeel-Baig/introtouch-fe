@@ -104,7 +104,7 @@ const AddService = ({ category, onClickClose }) => {
   };
 
   return (
-    <div class="space-y-6">
+    <div className="space-y-6">
       <HeaderTab activeTab={activeTab} setActiveTab={setActiveTab} category={category} />
       <div>
         {overallError && (

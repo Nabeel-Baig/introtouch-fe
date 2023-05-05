@@ -41,14 +41,14 @@ const Contacts = () => {
             {messages ? (
               messages.length > 0 && (
                 <Accordion collapseAll={true}>
-                  {messages.map((item) => (
-                    <Accordion.Panel>
+                  {messages.map((item, i) => (
+                    <Accordion.Panel key={i}>
                       <Accordion.Title>
                         {formatString(item.name, { titleCase: true })} -{" "}
                         {new Date(item.createdAt).toLocaleString()}
                       </Accordion.Title>
                       <Accordion.Content>
-                        <p className="mb-2 text-gray-500  dark:text-gray-400">
+                        <span className="mb-2 text-gray-500  dark:text-gray-400">
                           <h1 className="text-black">
                             { formatString(item.company||'', { titleCase: true })}
                           </h1>
@@ -58,7 +58,7 @@ const Contacts = () => {
                           >
                             {item.email}
                           </a>
-                        </p>
+                        </span>
                         <p className="text-gray-500 dark:text-gray-400">
                           {item.number}
                         </p>

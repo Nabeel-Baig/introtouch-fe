@@ -9,7 +9,7 @@ const Button = ({ onClick, text, className, isLoading = false, disabled=false })
     >
       {isLoading && (
         <svg
-          class="inline mr-2 w-5 h-5 text-white animate-spin fill-brand-dark-gray"
+          className="inline mr-2 w-5 h-5 text-white animate-spin fill-brand-dark-gray"
           viewBox="0 0 100 101"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

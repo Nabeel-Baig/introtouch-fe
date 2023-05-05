@@ -23,15 +23,15 @@ const DropDown = ({ title, items, onSelect }) => {
         id='dropdownUsersButton'
         data-dropdown-toggle='dropdownUsers'
         data-dropdown-placement='bottom'
-        class='text-white bg-brand-dark-brown rounded-md text-md px-4 py-2.5 text-left inline-flex items-center'
+        className='text-white bg-brand-dark-brown rounded-md text-md px-4 py-2.5 text-left inline-flex items-center'
         type='button'
         onClick={() => {
           setHidden(!hidden);
         }}
       >
-        <div class='w-full'>{title}</div>
+        <div className='w-full'>{title}</div>
         <svg
-          class='ml-2 w-4 h-4'
+          className='ml-2 w-4 h-4'
           aria-hidden='true'
           fill='none'
           stroke='currentColor'
@@ -48,12 +48,12 @@ const DropDown = ({ title, items, onSelect }) => {
       </button>
       <div
         id='dropdownUsers'
-        class={`${
+        className={`${
           hidden && 'hidden'
         } z-10 w-60 bg-white rounded shadow dark:bg-gray-700`}
       >
         <ul
-          class='overflow-y-auto py-1 h-48 text-gray-700 dark:text-gray-200'
+          className='overflow-y-auto py-1 h-48 text-gray-700 dark:text-gray-200'
           aria-labelledby='dropdownUsersButton'
         >
           {items.map((item,index) => {
@@ -61,7 +61,7 @@ const DropDown = ({ title, items, onSelect }) => {
               <li key={index}>
                 <a
                   href='#'
-                  class='flex items-center py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white'
+                  className='flex items-center py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white'
                   onClick={() => {
                     onSelect(item.title);
                     setHidden(true);
@@ -69,7 +69,7 @@ const DropDown = ({ title, items, onSelect }) => {
                 >
                   {item.image && (
                     <img
-                      class='mr-2 w-6 h-6 rounded-full'
+                      className='mr-2 w-6 h-6 rounded-full'
                       src={item.image}
                       alt={item.title}
                     />

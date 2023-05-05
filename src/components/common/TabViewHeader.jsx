@@ -2,20 +2,20 @@ import React from 'react';
 
 const TabViewHeader = ({ tabs, activeTab, onChange }) => {
   return (
-    <div class='text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700'>
-      <ul class='flex flex-wrap -mb-px'>
+    <div className='text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700'>
+      <ul className='flex flex-wrap -mb-px'>
         {tabs?.map((tab,index) => {
           const isActive = (activeTab && tab.key === activeTab.key) || (!activeTab && index===0)
           return (
             <li
-              class='mr-2'
+              className='mr-2'
               key={tab.key}
               onClick={() => {
                 onChange(tab);
               }}
             >
               <a
-                class={`${
+                className={`${
                   isActive
                     ? 'active text-blue-600 border-blue-600 dark:text-blue-500 dark:border-blue-500'
                     : 'hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300'
