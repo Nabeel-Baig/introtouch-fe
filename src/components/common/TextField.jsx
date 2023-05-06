@@ -1,4 +1,5 @@
 import React from "react";
+import styles from './styles.css'
 
 const TextField = ({
   icon,
@@ -23,7 +24,7 @@ const TextField = ({
           type={type}
           id={id}
           name={name}
-          className={`w-full h-8 font-semibold text-brand-dark-gray outline-none border-0`}
+          className={`w-full h-8 font-semibold text-brand-dark-gray outline-none border-0 focus-none`}
           placeholder={placeholder}
           value={value}
           onChange={onChange}
