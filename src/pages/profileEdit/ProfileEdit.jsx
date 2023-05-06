@@ -8,6 +8,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { getUser } from "../../store/actions";
 import Modal from "../../components/common/Modal";
 
+import userIcon from '../../assets/icons/auth/user.png'
+import companyIcon from '../../assets/icons/auth/company.png'
+import websiteIcon from '../../assets/icons/auth/website.png'
+import jobtitleIcon from '../../assets/icons/auth/job-title.png'
+import mobileIcon from '../../assets/icons/auth/phone.png'
+import workplaceNumIcon from '../../assets/icons/auth/workplace-phone.png'
+import faxIcon from '../../assets/icons/auth/fax.png'
+
 const ProfileEdit = ({ onClickClose }) => {
   const [profile, setProfile] = useState({
     firstName: "",
@@ -104,7 +112,7 @@ const ProfileEdit = ({ onClickClose }) => {
           </p>
           <form className="space-y-[36px] mt-10">
             <TextField
-              icon={mail}
+              icon={userIcon}
               label="First Name"
               type="text"
               value={profile.firstName}
@@ -115,7 +123,7 @@ const ProfileEdit = ({ onClickClose }) => {
               id="firstname"
             />
             <TextField
-              icon={mail}
+              icon={userIcon}
               label="Last Name"
               type="text"
               value={profile.lastName}
@@ -126,7 +134,7 @@ const ProfileEdit = ({ onClickClose }) => {
               id="lastname"
             />
             <TextField
-              icon={mail}
+              icon={companyIcon}
               label="Company"
               type="text"
               value={profile.company ? profile.company : ""}
@@ -136,7 +144,7 @@ const ProfileEdit = ({ onClickClose }) => {
               id="company"
             />
             <TextField
-              icon={mail}
+              icon={websiteIcon}
               label="Website"
               type="text"
               value={profile.website ? profile.website : ""}
@@ -146,7 +154,7 @@ const ProfileEdit = ({ onClickClose }) => {
               id="website"
             />
             <TextField
-              icon={mail}
+              icon={jobtitleIcon}
               label="Job title"
               type="text"
               error={roleError}
@@ -155,7 +163,7 @@ const ProfileEdit = ({ onClickClose }) => {
               id="role"
             />
             <TextField
-              icon={mail}
+              icon={mobileIcon}
               label="Mobile Number"
               type="tel"
               error={contactError}
@@ -166,7 +174,7 @@ const ProfileEdit = ({ onClickClose }) => {
               id="mobile"
             />
             <TextField
-              icon={mail}
+              icon={workplaceNumIcon}
               label="Workplace Number"
               type="tel"
               error={contactError}
@@ -177,7 +185,7 @@ const ProfileEdit = ({ onClickClose }) => {
               id="workplace"
             />
             <TextField
-              icon={mail}
+              icon={faxIcon}
               label="Fax Number"
               type="tel"
               error={contactError}
