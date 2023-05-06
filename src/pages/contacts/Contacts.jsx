@@ -11,7 +11,6 @@ import Spinner from "../../components/common/Spinner";
 const Contacts = () => {
   const [showSidebar, setshowSidebar] = useState(false);
   const [messages, setMessages] = useState();
-  const [collapseAll, setCollapseAll] = useState(false);
   const { user: userProfile } = useSelector((state) => state.userReducer);
   const getMessages = async () => {
     try {
@@ -22,7 +21,6 @@ const Contacts = () => {
 
   useEffect(() => {
     getMessages();
-    setCollapseAll(true);
   }, []);
 
   return (
