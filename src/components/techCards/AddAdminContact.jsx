@@ -24,7 +24,7 @@ const AddAdminContact = ({
           title={selectedService?.name || "Select an item"}
           onSelect={onSelect}
           items={adminServices
-            .filter((item) => item.category == category)
+            .filter((item) => item.category === category)
             .map((item) => ({ title: item.name, image: item.icon }))}
         />
       </div>
@@ -64,7 +64,7 @@ const AddAdminContact = ({
         />
       </div>
       <Button
-        text="Add Service"
+        text={category === 'PAYMENT_LINKS' ? 'Add Link': 'Add Service'}
         isLoading={isLoading}
         className="w-full bg-brand-dark-brown"
         onClick={() => addService("admin")}
