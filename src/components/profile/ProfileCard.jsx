@@ -18,6 +18,11 @@ import {
 import { getUser } from "../../store/actions";
 import ProfileEditModal from "../../pages/profileEdit/ProfileEdit";
 
+import mobileIcon from '../../assets/icons/auth/phone.png'
+import workplaceNumIcon from '../../assets/icons/auth/workplace-phone.png'
+import faxIcon from '../../assets/icons/auth/fax.png'
+import companyIcon from '../../assets/icons/auth/company.png'
+
 const ProfileCard = ({ userProfile, isPublic }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [isProfileEdit, setIsProfileEdit] = useState(false);
@@ -158,7 +163,7 @@ const ProfileCard = ({ userProfile, isPublic }) => {
               className="flex items-center gap-1 cursor-pointer hover:underline"
               onClick={() => openInSameTab(`tel:${userProfile.mobile}`)}
             >
-              <img src={mobile} alt="" className="w-[10px] h-[10px]" />
+              <img src={mobileIcon} alt="" className="w-[14px] h-[14px] invert" />
               <small className="text-[12px]">{formatPhoneNumber(userProfile.mobile)}</small>
             </div>
           )}
@@ -167,7 +172,7 @@ const ProfileCard = ({ userProfile, isPublic }) => {
               className="flex items-center gap-1 cursor-pointer hover:underline"
               onClick={() => openInSameTab(`tel:${userProfile.landPhone}`)}
             >
-              <img src={phone} alt="" className="w-[10px] h-[10px]" />
+              <img src={companyIcon} alt="" className="w-[14px] h-[14px] invert" />
               <small className="text-[12px]">{formatPhoneNumber(userProfile.landPhone)}</small>
             </div>
           )}
@@ -176,7 +181,7 @@ const ProfileCard = ({ userProfile, isPublic }) => {
               className="flex items-center gap-1 cursor-pointer hover:underline"
               onClick={() => openInSameTab(`tel:${userProfile.fax}`)}
             >
-              <img src={telephone} alt="" className="w-[10px] h-[10px]" />
+              <img src={faxIcon} alt="" className="w-[14px] h-[14px] invert" />
               <small className="text-[12px]">{formatPhoneNumber(userProfile.fax)}</small>
             </div>
           )}
