@@ -4,7 +4,7 @@ import ProfileHeader from "../../components/profile/ProfileHeader";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
 import { useSelector } from "react-redux";
-import { PieChart, Pie, Cell, Tooltip, Legend, Sector } from "recharts";
+import { PieChart, Pie, Cell, Tooltip, Legend, Sector, ResponsiveContainer } from "recharts";
 import ServiceList from "../../components/analytics/ServiceList";
 import Spinner from "../../components/common/Spinner";
 import { getEngagements } from "../../services/analytics";
@@ -218,6 +218,7 @@ const Analytics = () => {
                   </Dropdown>
                 </div>
 
+                <ResponsiveContainer>
                 <PieChart width={500} height={350} className="max-w">
                   <Pie
                     activeIndex={pieActiveIndex}
@@ -252,6 +253,7 @@ const Analytics = () => {
                     className="font-light"
                   />
                 </PieChart>
+                </ResponsiveContainer>
                 <ServiceList services={services} />
               </>
             ) : (

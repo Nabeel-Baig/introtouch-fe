@@ -39,7 +39,7 @@ const Sidebar = ({ closeSidebar, userProfile = {} }) => {
   }
   return (
     <div id="sidebar" ref={wrapperRef}>
-      <div className="fixed top-0 left-0 bottom-0 w-[300px] px-6 py-4 text-white bg-brand-sea font-inter">
+      <div className="fixed top-0 left-0 bottom-0 w-[300px] px-6 py-4 text-white bg-black font-inter">
         <img
           src={close}
           alt=""
