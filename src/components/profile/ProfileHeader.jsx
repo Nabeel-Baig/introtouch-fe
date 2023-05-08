@@ -55,7 +55,7 @@ const ProfileHeader = ({
         <Brand />
         <div className="flex items-center gap-4">
           {!isAdmin ? (
-            <Tooltip placement="left" content={copyText} trigger="hover">
+            <Tooltip placement="bottom" content={copyText} trigger="hover">
               <div
                 className="cursor-pointer"
                 onMouseDown={onMouseDown}
