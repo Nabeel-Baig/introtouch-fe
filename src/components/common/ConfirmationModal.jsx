@@ -30,7 +30,7 @@ const ConfirmationModalBody = ({ confirmFn,cancelFn,isLoading }) => {
           />
           <Button
             text="Confirm"
-            className=" bg-brand-brown m-6"
+            className=" bg-black text-white m-6"
             isLoading={isLoading}
             onClick={() => confirmFn()}
           />

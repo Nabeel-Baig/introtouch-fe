@@ -206,12 +206,12 @@ const Analytics = () => {
                 </div>
                 <div className="flex w-full justify-end">
                   <Dropdown
-                    className="shadow-md bg-brand-brown rounded-md"
+                    className="shadow-md bg-black text-white rounded-md"
                     label={timeFrameType.name}
                     dismissOnClick={true}
                   >
                     {TIME_FRAMES.map((item) => (
-                      <Dropdown.Item onClick={() => setTimeFrameType(item)}>
+                      <Dropdown.Item onClick={() => setTimeFrameType(item)} className=" hover:bg-black text-gray-50" style={{color: 'white'}}>
                         {item.name}
                       </Dropdown.Item>
                     ))}

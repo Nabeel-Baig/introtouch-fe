@@ -150,7 +150,7 @@ const ShareMyDetails = ({ onClickClose }) => {
                 type="email"
                 id="email"
                 error={emailError}
-                placeholder="email"
+                placeholder="Email"
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
               />
@@ -202,7 +202,7 @@ const ShareMyDetailsModal = ({ hidden, onClickClose }) => {
       body={<ShareMyDetails onClickClose={onClickClose} />}
       closeModal={onClickClose}
       className={
-        "bg-brand-brown shadow-2xl sm:min-h-0 max-h-[calc(100vh-80px)] w-11/12 sm:w-max [&::-webkit-scrollbar]:hidden"
+        "bg-black shadow-2xl sm:min-h-0 max-h-[calc(100vh-80px)] w-11/12 sm:w-max [&::-webkit-scrollbar]:hidden"
       }
       handleModalClose={onClickClose}
     />
