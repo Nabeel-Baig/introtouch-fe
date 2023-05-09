@@ -7,6 +7,7 @@ import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useCallback, useState } from "react";
 import { userSignIn, userSignUp } from "../../services";
 import { AUTH_STATES } from "../../constants";
+import userIcon from '../../assets/icons/auth/user.png'
 
 const Register = ({ auth, setauth, setTempUser }) => {
   const [data, setData] = useState({
@@ -115,7 +116,7 @@ const Register = ({ auth, setauth, setTempUser }) => {
           )}
           <form className="space-y-[36px] mt-10">
             <TextField
-              icon={mail}
+              icon={userIcon}
               label="First Name"
               type="text"
               value={data.firstName}
@@ -124,7 +125,7 @@ const Register = ({ auth, setauth, setTempUser }) => {
               id="firstname"
             />
             <TextField
-              icon={mail}
+              icon={userIcon}
               label="Last Name"
               type="text"
               value={data.lastName}

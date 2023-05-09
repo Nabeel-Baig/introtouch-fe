@@ -63,7 +63,7 @@ const Login = ({ auth, setTempUser }) => {
     return (
       <div id="dashboard">
         <Container>
-          <div className="flex flex-col w-full min-h-screen sm:min-h-0 sm:h-[calc(100vh-48px)] overflow-auto [&::-webkit-scrollbar]:hidden bg-brand-brown pt-[40px]">
+          <div className="flex flex-col w-full min-h-screen sm:min-h-0 sm:h-[calc(100vh-48px)] overflow-auto [&::-webkit-scrollbar]:hidden bg-black pt-[40px]">
             <div className="text-white font-bold w-fit mx-auto leading-[1]">
               <h1 className="text-[36px]">IntroTouch</h1>
               <p className=" text-right ">.com</p>
@@ -80,7 +80,7 @@ const Login = ({ auth, setTempUser }) => {
   return (
     <div id="login">
       <Container>
-        <div className="relative w-full min-h-screen sm:min-h-0 sm:h-[calc(100vh-48px)] overflow-auto [&::-webkit-scrollbar]:hidden bg-brand-brown pt-[40px]">
+        <div className="relative w-full min-h-screen sm:min-h-0 sm:h-[calc(100vh-48px)] overflow-auto [&::-webkit-scrollbar]:hidden bg-black pt-[40px]">
           <div className="text-white font-bold w-fit mx-auto leading-[1]">
             <h1 className="text-[36px]">IntroTouch</h1>
             <p className=" text-right ">.com</p>
