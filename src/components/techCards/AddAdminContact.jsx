@@ -64,7 +64,7 @@ const AddAdminContact = ({
         />
       </div>
       <Button
-        text={category === 'PAYMENT_LINKS' ? 'Add Link': 'Add Service'}
+        text="Add Link"
         isLoading={isLoading}
         className="w-full bg-brand-dark-brown"
         onClick={() => addService("admin")}

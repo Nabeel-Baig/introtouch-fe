@@ -12,7 +12,7 @@ const ProfileDesc = ({ username, userProfile }) => {
   const [isShareMyProfile, setIsShareMyProfile] = useState(false);
 
   const generateVcf = () => {
-    var vCard = vCardsJS();
+    const vCard = vCardsJS();
 
     vCard.firstName = userProfile.firstName ? userProfile.firstName : "";
     vCard.lastName = userProfile.lastName ? userProfile.lastName : "";
@@ -22,8 +22,9 @@ const ProfileDesc = ({ username, userProfile }) => {
     vCard.fax = userProfile.fax ? userProfile.fax : "";
     vCard.url = userProfile.website ? userProfile.website : "";
     vCard.photo.url = userProfile.imageUrl ? userProfile.imageUrl : "";
+    vCard.note = userProfile.bio ? userProfile.bio : "";
 
-    var file = new Blob([vCard.getFormattedString()], {
+    const file = new Blob([vCard.getFormattedString()], {
       type: "text/vcard;charset=utf-8",
     });
 

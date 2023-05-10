@@ -136,7 +136,7 @@ const Dashboard = ({ isPublicView, setauth }) => {
                   {isPublicView && (
                     <Button
                       text="Create your Profile"
-                      className="bg-brand-dark-brown"
+                      className="bg-brand-dark-gray"
                       onClick={() =>
                         navigate("/auth/register", { replace: false })
                       }

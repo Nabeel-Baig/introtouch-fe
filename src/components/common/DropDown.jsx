@@ -23,7 +23,7 @@ const DropDown = ({ title, items, onSelect }) => {
         id='dropdownUsersButton'
         data-dropdown-toggle='dropdownUsers'
         data-dropdown-placement='bottom'
-        className='text-white bg-brand-dark-brown rounded-md text-md px-4 py-2.5 text-left inline-flex items-center'
+        className='text-white bg-brand-dark-gray rounded-md text-md px-4 py-2.5 text-left inline-flex items-center'
         type='button'
         onClick={() => {
           setHidden(!hidden);

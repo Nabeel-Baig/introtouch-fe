@@ -22,7 +22,7 @@ const ProfileFront = ({setauth}) => {
               </p>
               <Button
                 text="Create your Profile"
-                className="bg-brand-dark-brown"
+                className="bg-brand-dark-gray"
               />
             </div>
           </div> */}

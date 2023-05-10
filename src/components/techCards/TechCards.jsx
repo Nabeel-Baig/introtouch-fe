@@ -9,6 +9,7 @@ const TechCards = ({ edit,userProfile }) => {
   const [isHiddenEdit, setHiddenEdit] = useState(true);
   const [category, setCategory] = useState(undefined);
   const [service, setService] = useState(undefined);
+
   const onClickAddService = (category)=>{
     setCategory(category)
     setHidden(false)
@@ -27,7 +28,7 @@ const TechCards = ({ edit,userProfile }) => {
   }
   return (
     <div id="techCards" className="space-y-7">
-      <div className=''>
+      <div>
       <AddTechCard hidden={isHidden} category={category} onClickClose={onClickClose} />
       <EditTechCard hidden={isHiddenEdit} service={service} onClickClose={onClickCloseEdit} />
       </div>
