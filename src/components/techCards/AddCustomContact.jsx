@@ -69,7 +69,7 @@ const AddCustomContact = ({
         />
       </div>
       <Button
-        text='Add Service'
+        text='Add Link'
         isLoading={isLoading}
         className='w-full bg-brand-dark-brown'
         onClick={() => addService('custom')}

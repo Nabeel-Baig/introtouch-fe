@@ -21,7 +21,8 @@ const ProfileEdit = ({ onClickClose }) => {
     firstName: "",
     lastName: "",
     mobile: "",
-    workplace: "",
+    landPhone: "",
+    // workplace: "",
     fax: "",
     role: "",
     company: "",
@@ -67,20 +68,20 @@ const ProfileEdit = ({ onClickClose }) => {
         if (!profile.role) {
           setRoleError("Role field cannot be empty");
         }
-        if (!profile.fax && !profile.mobile && !profile.workplace) {
+        if (!profile.fax && !profile.mobile && !profile.landPhone) {
           setContactError("Please enter atleast one profile");
         }
         if (
           profile.role &&
           profile.firstName &&
           profile.lastName &&
-          (profile.fax || profile.mobile || profile.workplace)
+          (profile.fax || profile.mobile || profile.landPhone)
         ) {
           await updateUser({
             firstName: profile.firstName,
             lastName: profile.lastName,
             role: profile.role,
-            landPhone: profile.workplace,
+            landPhone: profile.landPhone,
             fax: profile.fax,
             mobile: profile.mobile,
             company: profile.company,
