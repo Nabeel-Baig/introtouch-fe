@@ -110,7 +110,7 @@ const Dashboard = ({ isPublicView, setauth }) => {
                     <div className="flex gap-1 items-center justify-center">
                       <Button
                         text="+ Add Bio"
-                        className="px-10 bg-transparent border-dashed hover:border-solid border-gray-500 border text-gray-800 text-sm rounded-md"
+                        className="px-10 border-dashed hover:border-solid border-gray-500 border text-gray-800 text-sm rounded-md"
                         onClick={() => setIsBioEdit(true)}
                       />
                     </div>

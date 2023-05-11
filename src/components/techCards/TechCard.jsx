@@ -70,7 +70,7 @@ const TechCard = ({
                             className={`flex cursor-pointer items-center content-center bg-white rounded-[10px] overflow-hidden justify-center drop-shadow-md`}
                             onClick={() => {
                                 if (editable) {
-                                    onClickEditService(service);
+                                    onClickEditService(service,data.category);
                                 } else {
                                     if (!service.navigationType) return;
                                     addClickEvent({userId, serviceId: service.serviceId})

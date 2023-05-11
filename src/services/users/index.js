@@ -39,6 +39,14 @@ const upsertUserService = async (data) => {
   return null;
 };
 
+const updateUserServiceWithImage = async (data) => {
+  const user = await ApiClient.post('/contact/update/',data);
+  if (user && user.data) {
+    return user.data;
+  }
+  return null;
+}
+
 const updateUser = async (data) => {
   const user = await ApiClient.put(`/user`, data);
   if (user && user.data) {
@@ -68,6 +76,7 @@ const uploadUserAttachments = async (fileName, type)=>{
 export {
   getUserProfile,
   upsertUserService,
+  updateUserServiceWithImage,
   updateUser,
   getPublicUserProfile,
   sendPublicMessage,
