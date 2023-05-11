@@ -87,7 +87,7 @@ const ShareMyDetails = ({ onClickClose }) => {
   return (
     <div id="shareMyDetails">
       <Container>
-        <div className="relative font-inter w-full min-h-screen sm:min-h-0 sm:h-[calc(100vh-90px)] overflow-scroll [&::-webkit-scrollbar]:hidden py-2 ">
+        <div className="relative dssdsdsds font-inter w-full sm:min-h-0 sm:h-[calc(100vh-90px)] overflow-scroll [&::-webkit-scrollbar]:hidden py-2 ">
           <Brand />
           <div className="w-fit mx-auto my-5 items-center flex flex-col">
             {userProfile.imageUrl ? (
