@@ -6,6 +6,7 @@ import EditTechCard from './EditTechCard'
 
 const TechCards = ({ edit,userProfile }) => {
   const [isHidden, setHidden] = useState(true);
+  const [isHiddenEditCustom, setHiddenEditCustom] = useState(true);
   const [isHiddenEdit, setHiddenEdit] = useState(true);
   const [category, setCategory] = useState(undefined);
   const [service, setService] = useState(undefined);
@@ -18,8 +19,14 @@ const TechCards = ({ edit,userProfile }) => {
     setCategory(undefined)
     setHidden(true)
   }
-  const onClickEditService = (selectedService)=>{
+  const onClickEditService = (selectedService, category)=>{
+    if (selectedService.type === "CUSTOM") {
+      setHiddenEditCustom(false);
+    } else {
+      setHiddenEditCustom(true);
+    }
     setService(selectedService)
+    setCategory(category);
     setHiddenEdit(false)
   }
   const onClickCloseEdit = ()=>{
@@ -30,7 +37,7 @@ const TechCards = ({ edit,userProfile }) => {
     <div id="techCards" className="space-y-7">
       <div>
       <AddTechCard hidden={isHidden} category={category} onClickClose={onClickClose} />
-      <EditTechCard hidden={isHiddenEdit} service={service} onClickClose={onClickCloseEdit} />
+      <EditTechCard hidden={isHiddenEdit} isHiddenEdits={isHiddenEditCustom} category={category} service={service} onClickClose={onClickCloseEdit} />
       </div>
       {userProfile.services.map((el, i) => (
         <TechCard userId={userProfile?.userId} data={el} key={i} edit={edit} onClickAddService={onClickAddService} onClickEditService={onClickEditService} />
