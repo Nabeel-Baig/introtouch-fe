@@ -22,7 +22,7 @@ const ShareMyDetails = ({ onClickClose }) => {
   const [note, setNote] = useState(undefined);
   const [nameError, setNameError] = useState(undefined);
   const [emailError, setEmailError] = useState(undefined);
-  const [noteError, setNoteError] = useState(undefined);
+  const [numberError, setNumberError] = useState(undefined);
   const [isLoading, setIsLoading] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { userId: username } = useParams();
@@ -55,17 +55,17 @@ const ShareMyDetails = ({ onClickClose }) => {
       setIsLoading(true);
       setEmailError(null);
       setNameError(null);
-      setNoteError(null);
+      setNumberError(null);
       if (!name) {
         setNameError("Please enter your full name");
       }
       if (!email) {
         setEmailError("Please enter your email address");
       }
-      if (!note) {
-        setNoteError("Please enter a note");
+      if (!number) {
+        setNumberError("Please enter a number");
       }
-      if (!name || !email || !note) {
+      if (!name || !email || !number) {
         setIsLoading(false);
         return;
       }
@@ -159,9 +159,10 @@ const ShareMyDetails = ({ onClickClose }) => {
                 id="number"
                 placeholder="Number"
                 value={number}
+                error={numberError}
                 onChange={(event) => setNumber(event.target.value)}
               />
-              <Input
+              {/*<Input
                 className="hidden"
                 type="text"
                 id="company"
@@ -176,7 +177,7 @@ const ShareMyDetails = ({ onClickClose }) => {
                 error={noteError}
                 value={note}
                 onChange={(event) => setNote(event.target.value)}
-              />
+              />*/}
               <Button
                 text="Send"
                 isLoading={isLoading}
