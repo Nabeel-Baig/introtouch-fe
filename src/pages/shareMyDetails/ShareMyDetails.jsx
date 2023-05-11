@@ -205,6 +205,7 @@ const ShareMyDetailsModal = ({ hidden, onClickClose }) => {
         "bg-black shadow-2xl sm:min-h-0 max-h-[calc(100vh-80px)] w-11/12 sm:w-max [&::-webkit-scrollbar]:hidden"
       }
       handleModalClose={onClickClose}
+      closeBtnColorWhite
     />
   );
 };
