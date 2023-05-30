@@ -113,6 +113,7 @@ const Sidebar = ({ closeSidebar, userProfile = {} }) => {
           </ul>
         </div>
       </div>
+      <div className="sidebar-overlay fixed top-0 right-0 h-[100%] w-[calc(100%-300px)]" onClick={closeSidebar}></div>
       <ResetPasswordModal
         onClickClose={() => setIsResetPassword(false)}
         hidden={!isResetPassword}
