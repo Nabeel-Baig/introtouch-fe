@@ -35,7 +35,7 @@ const Contacts = () => {
             isProfileCard={false}
             isPublic={false}
           />
-          <div className="p-8 mt-10 flex flex-col flex-1 " style={{paddingBottom: '90px'}}>
+          <div className="p-8 mt-10 flex flex-col flex-1 " style={{paddingBottom: '145px'}}>
             {messages ? (
               messages.length > 0 && (
                 <Accordion collapseAll={true}>
