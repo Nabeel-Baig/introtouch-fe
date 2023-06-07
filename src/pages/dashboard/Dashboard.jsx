@@ -14,6 +14,7 @@ import Spinner from "../../components/common/Spinner";
 import { AUTH_STATES } from "../../constants";
 import AddBioCard from "../../components/techCards/AddBio";
 import { addViewEvent } from "../../services/analytics";
+import JoinFloat from "../../components/common/JoinFloat";
 
 function useQuery() {
   const { search } = useLocation();
@@ -132,8 +133,10 @@ const Dashboard = ({ isPublicView, setauth }) => {
                 </div>
                 <TechCards edit={!isPublicView} userProfile={userProfile} />
 
-                <div className="mt-5 pb-20 ">
-                  {isPublicView && (
+                {/* <div className="mt-5 pb-20"> */}
+                  {/* {isPublicView && (
+
+                    <JoinFloat to='/auth/register'/>
                     <Button
                       text="Create your Profile"
                       className="bg-brand-dark-gray"
@@ -141,8 +144,8 @@ const Dashboard = ({ isPublicView, setauth }) => {
                         navigate("/auth/register", { replace: false })
                       }
                     />
-                  )}
-                </div>
+                  )} */}
+                {/* </div> */}
               </>
             ) : (
               <Spinner />
@@ -163,6 +166,10 @@ const Dashboard = ({ isPublicView, setauth }) => {
         bio={bio}
         setBio={setBio}
       />
+
+      {isPublicView && (
+        <JoinFloat to='/auth/register'/>
+      )}
     </>
   );
 };
