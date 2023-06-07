@@ -1,0 +1,31 @@
+.join-btn-wrapper{
+  z-index: 222;
+  position: fixed;
+  bottom: 90px;
+  max-width: 510px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.join-btn{
+  background: black;
+  color: white;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  box-shadow: 1px 1px 10px white;
+  margin-right: 5px;
+  animation: beat .4s infinite alternate;
+	transform-origin: center;
+}
+
+@keyframes beat{
+	to { transform: scale(1.1); }
+}
