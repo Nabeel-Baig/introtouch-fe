@@ -8,6 +8,14 @@ import ShareMyDetailsModal from "../../pages/shareMyDetails/ShareMyDetails";
 import { useState } from "react";
 
 const ProfileDesc = ({ username, userProfile }) => {
+  const socialLinks = [];
+  for (const service of userProfile.services) {
+    if (service.category === "SOCIAL_LINKS") {
+      for (const social of service.services) {
+        socialLinks[social.name] = social.value;
+      }
+    }
+  }
   const navigate = useNavigate();
   const [isShareMyProfile, setIsShareMyProfile] = useState(false);
 
@@ -21,8 +29,16 @@ const ProfileDesc = ({ username, userProfile }) => {
     vCard.cellPhone = userProfile.mobile ? userProfile.mobile : "";
     vCard.fax = userProfile.fax ? userProfile.fax : "";
     vCard.url = userProfile.website ? userProfile.website : "";
-    vCard.photo.url = userProfile.imageUrl ? userProfile.imageUrl : "";
+    vCard.photo.attachFromUrl(userProfile.imageUrl ? userProfile.imageUrl : "");
     vCard.note = userProfile.bio ? userProfile.bio : "";
+    vCard.socialUrls['facebook'] = socialLinks['Facebook'] ?? '';
+    vCard.socialUrls['linkedIn'] = socialLinks['Linkedin'] ?? '';
+    vCard.socialUrls['twitter'] = socialLinks['Twitter'] ?? '';
+    vCard.socialUrls['tiktok'] = socialLinks['Tiktok'] ?? '';
+    vCard.socialUrls['youtube'] = socialLinks['Youtube'] ?? '';
+    vCard.socialUrls['instagram'] = socialLinks['Instagram'] ?? '';
+    vCard.socialUrls['pinterest'] = socialLinks['Pinterest'] ?? '';
+    vCard.version = '4.0';
 
     const file = new Blob([vCard.getFormattedString()], {
       type: "text/vcard;charset=utf-8",

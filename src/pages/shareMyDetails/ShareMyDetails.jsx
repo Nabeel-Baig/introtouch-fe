@@ -23,6 +23,7 @@ const ShareMyDetails = ({ onClickClose }) => {
   const [nameError, setNameError] = useState(undefined);
   const [emailError, setEmailError] = useState(undefined);
   const [numberError, setNumberError] = useState(undefined);
+  const [noteError, setNoteError] = useState(undefined);
   const [isLoading, setIsLoading] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { userId: username } = useParams();
@@ -64,6 +65,9 @@ const ShareMyDetails = ({ onClickClose }) => {
       }
       if (!number) {
         setNumberError("Please enter a number");
+      }
+      if (!note) {
+        setNoteError("Please enter a Note");
       }
       if (!name || !email || !number) {
         setIsLoading(false);
@@ -169,15 +173,14 @@ const ShareMyDetails = ({ onClickClose }) => {
                 placeholder="Company"
                 value={company}
                 onChange={(event) => setCompany(event.target.value)}
-              />
+              />*/}
               <Textarea
-                className="hidden"
                 id="note"
                 placeholder="Note"
                 error={noteError}
                 value={note}
                 onChange={(event) => setNote(event.target.value)}
-              />*/}
+              />
               <Button
                 text="Send"
                 isLoading={isLoading}

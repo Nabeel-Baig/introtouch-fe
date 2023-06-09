@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom';
 import './join-style.css';
 
 
-const JoinFloat = (props) => {
+const JoinFloat = ({to, title}) => {
   return(
     <div className="join-btn-wrapper">
-      <Link to={props.to} className="join-btn">Join Intro Touch</Link>
+      <Link to={to} target="_blank" className="join-btn">{title}</Link>
     </div>
   )
 }
