@@ -9,6 +9,8 @@ import { userSignIn, googleSignIn, resendOtp } from "../../services";
 import { memberEmailValidation } from "../../utils/validations";
 import { AUTH_STATES } from "../../constants";
 import Spinner from "../../components/common/Spinner";
+import SocialBtn from "../../components/common/SocialBtn";
+import './styles.css'
 
 const Login = ({ auth, setTempUser }) => {
   const [data, setData] = useState({
@@ -84,7 +86,7 @@ const Login = ({ auth, setTempUser }) => {
             <h1 className="text-[36px]">IntroTouch</h1>
           </div>
 
-          <div className="absolute bottom-0 w-full bg-white pt-[30px] px-6 rounded-t-[20px]">
+          <div className="w-full bg-white pt-[30px] pb-[40px] mt-[100px] px-6 rounded-t-[20px] ">
             <h1 className="text-center text-xl text-brand-dark-gray font-extrabold font-inter">
               LOGIN
             </h1>
@@ -118,6 +120,13 @@ const Login = ({ auth, setTempUser }) => {
                 className="px-10"
                 onClick={login}
               />
+
+              <div className="separator"><span>OR</span></div>
+
+              <SocialBtn google label='Signin with Google'/>
+              <SocialBtn facebook label='Signin with Facebook'/>
+              <SocialBtn apple label='Signin with Apple'/>
+
               <p className="text-[14px] font-inter text-center">
                 Need an account?&nbsp;&nbsp;
                 <Link
