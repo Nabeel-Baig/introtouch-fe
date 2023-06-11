@@ -109,7 +109,6 @@ const OtpValidation = ({ tempUser = {}, auth }) => {
         <div className="relative w-full min-h-screen sm:min-h-0 sm:h-[calc(100vh-48px)] overflow-auto [&::-webkit-scrollbar]:hidden bg-black pt-[100px]">
           <div className="text-white font-bold w-fit mx-auto leading-[1]">
             <h1 className="text-[36px]">IntroTouch</h1>
-            <p className=" text-right ">.com</p>
           </div>
           {}
           <div className="absolute bottom-0 w-full bg-white pt-[30px] px-6 rounded-t-[20px]">
