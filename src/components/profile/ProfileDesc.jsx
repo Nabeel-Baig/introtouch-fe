@@ -50,14 +50,15 @@ const ProfileDesc = ({ username, userProfile }) => {
     <>
       <div className="flex justify-between gap-5 mb-5">
         <IconButton
-          text="Save to Phone"
+          text="Save to Contacts"
           icon={phonebook}
           onclick={() => generateVcf()}
+          className='justify-center'
         />
         <IconButton
           text="Share my Details"
           icon={employeeId}
-          className="bg-brand-sky"
+          className="bg-brand-sky justify-center"
           onclick={() => setIsShareMyProfile(true)}
         />
         <ShareMyDetailsModal
