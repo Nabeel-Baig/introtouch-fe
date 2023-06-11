@@ -8,6 +8,8 @@ import { useCallback, useState } from "react";
 import { userSignIn, userSignUp } from "../../services";
 import { AUTH_STATES } from "../../constants";
 import userIcon from '../../assets/icons/auth/user.png'
+import SocialBtn from "../../components/common/SocialBtn";
+import './styles.css'
 
 const Register = ({ auth, setauth, setTempUser }) => {
   const [data, setData] = useState({
@@ -169,6 +171,13 @@ const Register = ({ auth, setauth, setTempUser }) => {
               className="px-10"
               onClick={handleRegister}
             />
+            
+            <div className="separator"><span>OR</span></div>
+
+            <SocialBtn google label='Signup with Google'/>
+            <SocialBtn facebook label='Signup with Facebook'/>
+            <SocialBtn apple label='Signup with Apple'/>
+            
             <p className="text-[14px] font-inter text-center">
               Already have an account?&nbsp;&nbsp;
               <Link
