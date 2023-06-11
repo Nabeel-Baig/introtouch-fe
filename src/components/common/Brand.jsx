@@ -6,7 +6,6 @@ const Brand = () => {
       title="Intro Touch"
     >
       <h1 className="text-xl">IntroTouch</h1>
-      <p className="text-right text-[10px]">.com</p>
     </div>
   );
 };
