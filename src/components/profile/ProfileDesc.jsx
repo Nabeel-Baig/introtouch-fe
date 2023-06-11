@@ -56,7 +56,7 @@ const ProfileDesc = ({ username, userProfile }) => {
           className='justify-center'
         />
         <IconButton
-          text="Share my Details"
+          text="Share my Info"
           icon={employeeId}
           className="bg-brand-sky justify-center"
           onclick={() => setIsShareMyProfile(true)}
