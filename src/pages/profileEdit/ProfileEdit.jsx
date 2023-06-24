@@ -15,6 +15,7 @@ import jobtitleIcon from '../../assets/icons/auth/job-title.png'
 import mobileIcon from '../../assets/icons/auth/phone.png'
 import workplaceNumIcon from '../../assets/icons/auth/workplace-phone.png'
 import faxIcon from '../../assets/icons/auth/fax.png'
+import keyword from '../../assets/icons/auth/keyword.png'
 
 const ProfileEdit = ({ onClickClose }) => {
   const [profile, setProfile] = useState({
@@ -104,7 +105,7 @@ const ProfileEdit = ({ onClickClose }) => {
   return (
     <div id="login">
       <Container>
-        <div className="relative w-full min-h-screen sm:min-h-0 sm:h-[calc(100vh-48px)] overflow-auto [&::-webkit-scrollbar]:hidden bg-white pt-[30px]">
+        <div className="relative w-full min-h-screen sm:min-h-0 sm:h-[calc(100vh-48px)] overflow-auto [&::-webkit-scrollbar]:hidden bg-white pt-[1px] pb-[40px]">
           <h1 className="text-center text-xl text-brand-dark-gray font-extrabold font-inter">
             Profile Details
           </h1>
@@ -134,6 +135,17 @@ const ProfileEdit = ({ onClickClose }) => {
               }
               id="lastname"
             />
+             <TextField
+              icon={companyIcon}
+              label="Industry"
+              type="text"
+              value={""}
+              onChange={(e) =>
+                setProfile({ ...profile, company: e.target.value })
+              }
+              id="company"
+            />
+            <small className="text-brand-mid-gray ml-1">What industry describes you/your business the best</small>
             <TextField
               icon={companyIcon}
               label="Company"
@@ -144,16 +156,7 @@ const ProfileEdit = ({ onClickClose }) => {
               }
               id="company"
             />
-            <TextField
-              icon={websiteIcon}
-              label="Website"
-              type="text"
-              value={profile.website ? profile.website : ""}
-              onChange={(e) =>
-                setProfile({ ...profile, website: e.target.value })
-              }
-              id="website"
-            />
+            
             <TextField
               icon={jobtitleIcon}
               label="Job title"
@@ -176,7 +179,7 @@ const ProfileEdit = ({ onClickClose }) => {
             />
             <TextField
               icon={workplaceNumIcon}
-              label="Workplace Number"
+              label="Office Number"
               type="tel"
               error={contactError}
               value={profile.landPhone}
@@ -186,14 +189,35 @@ const ProfileEdit = ({ onClickClose }) => {
               id="workplace"
             />
             <TextField
-              icon={faxIcon}
-              label="Fax Number"
-              type="tel"
+              icon={mail}
+              label="Email"
+              type="email"
               error={contactError}
               value={profile.fax}
               onChange={(e) => setProfile({ ...profile, fax: e.target.value })}
               id="fax"
             />
+            <TextField
+              icon={websiteIcon}
+              label="Website"
+              type="text"
+              value={profile.website ? profile.website : ""}
+              onChange={(e) =>
+                setProfile({ ...profile, website: e.target.value })
+              }
+              id="website"
+            />
+            <TextField
+              icon={keyword}
+              label="Keywords"
+              type="text"
+              value={""}
+              onChange={(e) =>
+                setProfile({ ...profile, website: e.target.value })
+              }
+              id="website"
+            />
+            <small className="text-brand-mid-gray ml-1">Describes the user on what he is in a single line</small>
             <Button
               isLoading={isLoading}
               text="Save"

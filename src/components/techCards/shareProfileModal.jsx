@@ -6,6 +6,19 @@ import Send from "../../assets/icons/common/mingcute_send-plane-line.svg";
 import Tick from "../../assets/icons/common/tick.svg";
 import { Tooltip } from "flowbite-react";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-flip";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+import './shareProfile.css'
+
+// import required modules
+import { EffectFlip, Pagination, Navigation } from "swiper";
+
 const ShareProfileBody = ({ link, isPublic }) => {
   const [email, setEmail] = useState();
   const [isLoading, setIsLoading] = useState(false);
@@ -52,7 +65,18 @@ const ShareProfileBody = ({ link, isPublic }) => {
     <div className="space-y-6">
       {!isPublic && (
         <>
-          <label
+         
+
+          <Swiper
+            effect={"flip"}
+            grabCursor={true}
+            navigation={true}
+            modules={[EffectFlip, Pagination, Navigation]}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <>
+              <label
             htmlFor="value"
             className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >
@@ -87,7 +111,15 @@ const ShareProfileBody = ({ link, isPublic }) => {
               }}
             />
           </div>
+              </>
+            </SwiperSlide>
+            <SwiperSlide>
+              <p>QR code goes here</p>
+            </SwiperSlide>
+          </Swiper>
         </>
+
+        
       )}
 
       <div className="mt-5 flex justify-center">

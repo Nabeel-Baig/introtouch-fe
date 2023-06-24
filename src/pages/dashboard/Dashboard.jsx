@@ -100,7 +100,7 @@ const Dashboard = ({isPublicView, setauth}) => {
                         isPublic={isPublicView}
                     />
 
-                    <div className="p-8 mt-10 " style={{paddingBottom: '130px'}}>
+                    <div className="p-8 mt-[55px] " style={{paddingBottom: '130px'}}>
                         {userProfile ? (
                             <>
                                 {isPublicView && (
