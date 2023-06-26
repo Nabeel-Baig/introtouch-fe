@@ -138,13 +138,13 @@ const EditService = ({service, hidden, onClickClose, category}) => {
                     for="value"
                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                    Link/URL
+                    {serviceName}
                 </label>
                 <input
                     type="text"
                     name="value"
                     id="value"
-                    placeholder="Link/URL"
+                    placeholder={serviceName}
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                     required
                     value={value}
@@ -193,7 +193,8 @@ const EditTechCard = ({service, hidden, isHiddenEdits, onClickClose, category}) 
     return (
         <Modal
             title={"Edit Link"}
-            body={<EditService hidden={isHiddenEdits} category={category} service={service} onClickClose={onClickClose}/>}
+            body={<EditService hidden={isHiddenEdits} category={category} service={service}
+                               onClickClose={onClickClose}/>}
             closeModal={onClickClose}
             className={"bg-[#fafaf7] shadow-2xl"}
             handleModalClose={onClickClose}
