@@ -15,6 +15,7 @@ import {AUTH_STATES} from "../../constants";
 import AddBioCard from "../../components/techCards/AddBio";
 import {addViewEvent} from "../../services/analytics";
 import JoinFloat from "../../components/common/JoinFloat";
+import NavbarPublic from "../../components/navbar/NavbarPublic";
 
 function useQuery() {
     const {search} = useLocation();
@@ -157,6 +158,7 @@ const Dashboard = ({isPublicView, setauth}) => {
                     </div>
                     {!isPublicView && <Navbar userProfile={userProfile}
                                               username={params.userId}/>}
+                                              {isPublicView && <NavbarPublic />}
                 </div>
             </Container>
             {showSidebar && (
