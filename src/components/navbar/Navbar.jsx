@@ -12,7 +12,7 @@ const navlinks = [
     {title: 'Home', icon: home, to: '/'},
     {title: 'Contacts', icon: user, to: '/contacts'},
     {title: 'Analytics', icon: chart, to: '/analytics'},
-    {title: 'Products', icon: qr, to: ''},
+    {title: 'Products', icon: qr, to: 'https://introtouch.com/'},
 ];
 
 const Navbar = ({userProfile, username}) => {
