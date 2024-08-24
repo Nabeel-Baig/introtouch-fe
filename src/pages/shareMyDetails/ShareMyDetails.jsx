@@ -4,21 +4,20 @@ import Textarea from "../../components/common/Textarea";
 import Button from "../../components/common/Button";
 import Brand from "../../components/common/Brand";
 import placeholder from "../../assets/images/placeholder.jpg";
-import { useSelector, useDispatch } from "react-redux";
-import { formatString } from "../../utils/common";
-import { Navigate, useParams } from "react-router-dom";
-import { getPublicUser } from "../../store/actions";
+import {useDispatch, useSelector} from "react-redux";
+import {formatString} from "../../utils/common";
+import {Navigate, useParams} from "react-router-dom";
+import {getPublicUser} from "../../store/actions";
 import Spinner from "../../components/common/Spinner";
 
-import { useEffect, useState } from "react";
-import { sendPublicMessage } from "../../services";
+import {useEffect, useState} from "react";
+import {sendPublicMessage} from "../../services";
 import Modal from "../../components/common/Modal";
 
 const ShareMyDetails = ({ onClickClose }) => {
   const [name, setName] = useState(undefined);
   const [email, setEmail] = useState(undefined);
   const [number, setNumber] = useState(undefined);
-  const [company, setCompany] = useState(undefined);
   const [note, setNote] = useState(undefined);
   const [nameError, setNameError] = useState(undefined);
   const [emailError, setEmailError] = useState(undefined);
@@ -79,7 +78,6 @@ const ShareMyDetails = ({ onClickClose }) => {
         name,
         email,
         number,
-        company,
         note,
       });
       setIsSubmitted(true);
@@ -88,45 +86,11 @@ const ShareMyDetails = ({ onClickClose }) => {
     }
   };
 
-  const [open, setOpen] = useState(false)
-  const [openSocials, setOpenSocials] = useState(false)
-  const [addmore, setaddmore] = useState(false)
-
   return (
     <div id="shareMyDetails">
       <Container>
         <div className="relative pb-[60px] font-inter w-full sm:min-h-0 sm:h-[calc(100vh-90px)] overflow-scroll [&::-webkit-scrollbar]:hidden py-2 ">
-          <div className="text-white">
-            <div className="flex justify-end mb-4">
-              <button className="font-[300] block rounded-[5px] font-inter hover:opacity-80 mr-3 bg-white text-black px-4 py-2 " onClick={() => setOpen(!open)}>Scan Business Card</button>
-              <button className="bg-brand-dark-gray text-white font-[300] block rounded-[5px] font-inter px-4 py-2 hover:opacity-80" onClick={() => setOpenSocials(!openSocials)}>Share Socials Only</button>
-            </div>
-            {
-              open && <div className="text-right mb-4"><input type="file" name="businesscard" id="bcard" /></div>
-            }
-            {
-              openSocials && <div className="text-right space-y-3">
-                <Input
-                  type="text"
-                  id="name"
-                  error={nameError}
-                  placeholder="LinkedIn"
-                  value={name}
-                  onChange={(event) => setName(event.target.value)}
-                />
-                <Input
-                  type="text"
-                  id="name"
-                  error={nameError}
-                  placeholder="TickTock"
-                  value={name}
-                  onChange={(event) => setName(event.target.value)}
-                />
-              </div>
-            }
-            
-          </div>
-          {/* <Brand /> */}
+           <Brand username={username} />
 
           <div className="w-fit mx-auto my-5 items-center flex flex-col">
             {userProfile.imageUrl ? (
@@ -168,9 +132,7 @@ const ShareMyDetails = ({ onClickClose }) => {
             
             <Button
                 text="Back to Profile"
-                onClick={(e) => 
-                  onClickClose()
-                }
+                onClick={onClickClose}
               />
             
           </div>
@@ -210,14 +172,6 @@ const ShareMyDetails = ({ onClickClose }) => {
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
               />
-              {/*<Input
-                className="hidden"
-                type="text"
-                id="company"
-                placeholder="Company"
-                value={company}
-                onChange={(event) => setCompany(event.target.value)}
-              />*/}
               <Textarea
                 id="note"
                 placeholder="Note"
@@ -226,49 +180,7 @@ const ShareMyDetails = ({ onClickClose }) => {
                 onChange={(event) => setNote(event.target.value)}
               />
 
-              <button type="button" className="text-white" onClick={() => {setaddmore(!addmore)}}>-- Add more --</button>
-              {
-                addmore && <div className="space-y-3 pb-4">
-                <Input
-                  type="text"
-                  id="name"
-                  error={nameError}
-                  placeholder="Company Name"
-                  value={name}
-                  onChange={(event) => setName(event.target.value)}
-                />
-                <Input
-                  type="text"
-                  id="name"
-                  error={nameError}
-                  placeholder="Job Title/Position"
-                  value={name}
-                  onChange={(event) => setName(event.target.value)}
-                />
-                <Input
-                  type="text"
-                  id="name"
-                  error={nameError}
-                  placeholder="Website"
-                  value={name}
-                  onChange={(event) => setName(event.target.value)}
-                />
-                <div>
-                <Input
-                  type="checkbox"
-                  id="location"
-                  error={nameError}
-                  placeholder="Location"
-                  value={name}
-                  onChange={(event) => setName(event.target.value)}
-                  className='!w-3 mr-3'
-                />
-                <label className="text-white" htmlFor="location">Share Location</label>
 
-                </div>
-              </div>
-              }
-              
               <Button
                 text="Send"
                 isLoading={isLoading}

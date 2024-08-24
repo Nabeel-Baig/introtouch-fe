@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {useLocation, useNavigate, useParams} from "react-router-dom";
+import {useLocation, useParams} from "react-router-dom";
 import Button from "../../components/common/Button";
 import Container from "../../components/common/Container";
 import ProfileHeader from "../../components/profile/ProfileHeader";
@@ -28,15 +28,14 @@ const Dashboard = ({isPublicView, setauth}) => {
     const [isBioEdit, setIsBioEdit] = useState(false);
     const dispatch = useDispatch();
     const params = useParams();
-    const navigate = useNavigate();
     let query = useQuery();
 
 
     const userProfile = useSelector((state) =>
         isPublicView ? state.userReducer.publicUser : state.userReducer.user
     );
+
     const [bio, setBio] = useState(userProfile?.bio);
-    const [web, setWeb] = useState(userProfile?.website);
     useEffect(() => {
         if (isPublicView) {
             if (params && params.userId) {
@@ -56,12 +55,11 @@ const Dashboard = ({isPublicView, setauth}) => {
             }, 10000);
         }
         setBio(userProfile?.bio);
-        setWeb(userProfile?.website);
         return () => {
             if (timer1) clearTimeout(timer1);
         };
     }, [userProfile]);
-
+    console.log("userProfile12",params.userId)
     if (!userProfile) {
         return (
             <div id="dashboard">
@@ -73,6 +71,7 @@ const Dashboard = ({isPublicView, setauth}) => {
                             setshowSidebar={setshowSidebar}
                             showMenu={!isPublicView}
                             userProfile={userProfile}
+                            username={params.userId}
                             isProfileCard={false}
                             isPublic={true}
                         />

@@ -1,10 +1,10 @@
 import share from "../../assets/icons/common/share.png";
 import menu from "../../assets/icons/common/menu.png";
 import ProfileCard from "./ProfileCard";
-import { ShareProfileModal } from "../techCards/shareProfileModal";
+import {ShareProfileModal} from "../techCards/shareProfileModal";
 import Brand from "../../components/common/Brand";
-import { Tooltip } from "flowbite-react";
-import { useCallback, useState } from "react";
+import {Tooltip} from "flowbite-react";
+import {useCallback, useState} from "react";
 import env from '../../env.json';
 import bookmark from '../../assets/icons/common/ribbon.png';
 
@@ -30,6 +30,8 @@ const ProfileHeader = ({
   const onMouseLeave = useCallback(() => {
     setCopyText("Click to share profile");
   }, [copyText]);
+
+  console.log("userProfile", username)
   return (
     <div
       className={`bg-brand-dark-gray p-8 ${
@@ -54,7 +56,7 @@ const ProfileHeader = ({
             />
           )}
         </div>
-        <Brand />
+        <Brand username={username} />
         <div className="flex items-center gap-4">
           <img src={bookmark} alt="" className="cursor-pointer invert"/>
           {!isAdmin ? (
