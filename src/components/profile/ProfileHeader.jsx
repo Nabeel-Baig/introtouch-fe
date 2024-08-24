@@ -6,7 +6,6 @@ import Brand from "../../components/common/Brand";
 import {Tooltip} from "flowbite-react";
 import {useCallback, useState} from "react";
 import env from '../../env.json';
-import bookmark from '../../assets/icons/common/ribbon.png';
 
 const ProfileHeader = ({
   showMenu,
@@ -58,7 +57,7 @@ const ProfileHeader = ({
         </div>
         <Brand username={username} />
         <div className="flex items-center gap-4">
-          <img src={bookmark} alt="" className="cursor-pointer invert"/>
+          {/*<img src={bookmark} alt="" className="cursor-pointer invert"/>*/}
           {!isAdmin ? (
             <Tooltip placement="bottom" content={copyText} trigger="hover">
               <div
